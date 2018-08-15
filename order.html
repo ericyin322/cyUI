@@ -99,16 +99,26 @@
 
       .bar{
         width: 100%;
-        height: 10px;
-        border: 1px solid gray;
-        border-radius:5px;
+        height: 6px;
+        border: 0px solid gray;
+        border-radius:3px;
         background-color: gray; 
 
       }
-      .bar.hover{
-        background-color: blue;
+
+      .meal-cate{
+
+      }
+      .meal-cate .meal-cate-item{
+
+      }
+      .meal-cate .meal-cate-item.chosen .bar{
+        background-color: springgreen;
       }
 
+      .meal.disabled{
+        display: none
+      }
       .meal-item{
         padding: 3px 7px;
         border: 1px solid lightgray;
@@ -126,15 +136,23 @@
         color:black;
         box-shadow: rgba(0,0,0,0.3) -3px 3px 10px 1px;
       }
+      .meal-item .meal-description{
 
+        overflow: hidden;
+      }
+      .meal-item .meal-money{
+        width: 14%;
+        font-size: 1.2rem;
+      }
       .meal-item .meal-amount-input{
         display: none;
-        width: 50px;
+        width: 10%;
       }
       
       .meal-item .meal-amount-order{
         display: block;
-        width: 50px;
+        width: 10%;
+        font-size: 1.2rem;
       }
 
       .meal-item.chosen .meal-amount-input{
@@ -158,7 +176,7 @@
 
   	<main class="container">
 
-<!--
+
   		<div class="icon-main mb-1"><img src="https://www.google.com.tw/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"></div>
 
 
@@ -176,82 +194,96 @@
   		  <img class="card-img-top" src="https://www.hotburger.com.tw/upload/image/website/slide1.jpg" >
   		</div>
 
-      <div class="swipe-container">
-        <div class="swipe-item p-1 mr-4">
-          <i class="fas fa-lemon fa-4x mb-2"></i>
+      <div class="swipe-container mb-2 meal-cate">
+        <div class="swipe-item p-1 mr-4 meal-cate-item chosen" data-mealCate="meal1">
+          <i class="fas fa-fish fa-4x mb-2"></i>
           <div class="bar"></div>
         </div>
-        <div class="swipe-item p-1 mr-4">
-          <i class="fas fa-lemon fa-4x mb-2"></i>
+        <div class="swipe-item p-1 mr-4 meal-cate-item" data-mealCate="meal2">
+          <i class="fas fa-cookie-bite fa-4x mb-2"></i>
           <div class="bar"></div>
         </div>
-        <div class="swipe-item p-1 mr-4" >
+        <div class="swipe-item p-1 mr-4 meal-cate-item" data-mealCate="meal3">
           <i class="fas fa-lemon fa-4x mb-2"></i>
           <div class="bar"></div>
         </div>
 
-        <div class="swipe-item p-1 mr-4" >
+        <div class="swipe-item p-1 mr-4 meal-cate-item" data-mealCate="meal4">
           <i class="fas fa-lemon fa-4x mb-2"></i>
           <div class="bar"></div>
         </div>
       </div>
 
--->
+
   		<div class="meals" >
 
-        <ul class="nav flex-column meal">
+        <ul class="nav flex-column meal" data-mealCate="meal1">
           <li class="nav-item meal-item d-flex justify-content-between mb-2">
-            <div class="mr-1">
+            <div class="meal-description mr-1">
               <span class="mr-1" style="font-size: 1.4rem">鮪魚漢堡夾蛋</span>
-              <span style="font-size: 0.6rem">美生菜、番茄、鮪魚、好吃</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
             </div>
-            <div  class="meal-amount-order">
-              <span>X</span>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
               <span>1</span>
             </div>
-            <div  class="meal-amount-input">
+            <div  class="meal-amount-input mr-1">
               <input type="number" name="" class="form-control form-control-sm">
             </div>
           </li>
 
           <li class="nav-item meal-item d-flex justify-content-between mb-2">
-            <div class="mr-1">
+            <div class="meal-description mr-1">
               <span class="mr-1" style="font-size: 1.4rem">鮪魚漢堡夾蛋</span>
-              <span style="font-size: 0.6rem">美生菜、番茄、鮪魚、好吃</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
             </div>
-            <div  class="meal-amount-order">
-              <span>X</span>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
               <span>1</span>
             </div>
-            <div  class="meal-amount-input">
+            <div  class="meal-amount-input mr-1">
               <input type="number" name="" class="form-control form-control-sm">
             </div>
           </li>
-
           <li class="nav-item meal-item d-flex justify-content-between mb-2">
-            <div class="mr-1">
+            <div class="meal-description mr-1">
               <span class="mr-1" style="font-size: 1.4rem">鮪魚漢堡夾蛋</span>
-              <span style="font-size: 0.6rem">美生菜、番茄、鮪魚、好吃</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
             </div>
-            <div  class="meal-amount-order">
-              <span>X</span>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
               <span>1</span>
             </div>
-            <div  class="meal-amount-input">
+            <div  class="meal-amount-input mr-1">
               <input type="number" name="" class="form-control form-control-sm">
             </div>
           </li>
-
-          <li class="nav-item meal-item d-flex justify-content-between mb-2">
-            <div class="mr-1">
+          <li class="nav-item meal-item d-flex justify-content-between mb-2 disabled">
+            <div class="meal-description mr-1">
               <span class="mr-1" style="font-size: 1.4rem">鮪魚漢堡夾蛋</span>
-              <span style="font-size: 0.6rem">美生菜、番茄、鮪魚、好吃</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
             </div>
-            <div  class="meal-amount-order">
-              <span>X</span>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
               <span>1</span>
             </div>
-            <div  class="meal-amount-input">
+            <div  class="meal-amount-input mr-1">
               <input type="number" name="" class="form-control form-control-sm">
             </div>
           </li>
@@ -259,6 +291,79 @@
 
         </ul>
 
+        <ul class="nav flex-column meal disabled" data-mealCate="meal2">
+          <li class="nav-item meal-item d-flex justify-content-between mb-2">
+            <div class="meal-description mr-1">
+              <span class="mr-1" style="font-size: 1.4rem">餅乾漢堡夾蛋</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
+            </div>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
+              <span>1</span>
+            </div>
+            <div  class="meal-amount-input mr-1">
+              <input type="number" name="" class="form-control form-control-sm">
+            </div>
+          </li>
+
+          <li class="nav-item meal-item d-flex justify-content-between mb-2">
+            <div class="meal-description mr-1">
+              <span class="mr-1" style="font-size: 1.4rem">鮪魚漢堡夾蛋</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
+            </div>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
+              <span>1</span>
+            </div>
+            <div  class="meal-amount-input mr-1">
+              <input type="number" name="" class="form-control form-control-sm">
+            </div>
+          </li>
+          <li class="nav-item meal-item d-flex justify-content-between mb-2">
+            <div class="meal-description mr-1">
+              <span class="mr-1" style="font-size: 1.4rem">鮪魚漢堡夾蛋</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
+            </div>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
+              <span>1</span>
+            </div>
+            <div  class="meal-amount-input mr-1">
+              <input type="number" name="" class="form-control form-control-sm">
+            </div>
+          </li>
+          <li class="nav-item meal-item d-flex justify-content-between mb-2 disabled">
+            <div class="meal-description mr-1">
+              <span class="mr-1" style="font-size: 1.4rem">鮪魚漢堡夾蛋</span>
+              <span style="font-size: 0.5rem">美生菜、番茄、鮪魚、好吃</span>
+            </div>
+            <div  class="meal-money mr-1">
+              <span>$</span>
+              <span>40</span>
+            </div>
+            <div  class="meal-amount-order  mr-1">
+              <span>x</span>
+              <span>1</span>
+            </div>
+            <div  class="meal-amount-input mr-1">
+              <input type="number" name="" class="form-control form-control-sm">
+            </div>
+          </li>
+
+
+        </ul>
       
   		</div>
 
@@ -279,6 +384,15 @@
     	})
 
       function initUI() {
+        $(".meal-cate-item").on("click", function(e){
+
+          $(".meal-cate-item").removeClass("chosen")
+          $(this).addClass("chosen")
+          $(".meal").addClass("disabled")
+          //alert("[data-mealCate="+$(this).attr('data-mealCate')+"]")
+          $(".meal[data-mealCate="+$(this).attr('data-mealCate')+"]").removeClass("disabled")
+        })
+
         $(".meal-item").on("click", function(e){
           if($(this).hasClass("disabled"))
             return
